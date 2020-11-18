@@ -1,9 +1,25 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 250px;
+  top: 30%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -100px;
+  align-items: center;
 
 }
 
-
+.wrapper > p {
+  font-weight: 600;
+padding-top: 1rem;
+}
 
 .gauge {
   width: 100%;

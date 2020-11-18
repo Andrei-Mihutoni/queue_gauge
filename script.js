@@ -12,7 +12,7 @@ function loadJSON() {
             // when loaded, prepare objects
             prepareData(data);
         });
-    setTimeout(loadJSON, 5000);
+    setTimeout(loadJSON, 10000);
 };
 
 
