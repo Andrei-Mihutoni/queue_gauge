@@ -39,8 +39,21 @@ padding-top: 1rem;
   overflow: hidden;
 }
 
-.gaugeFill {
+.fillWrapper {
   position: absolute;
+  top: 100%;
+  left: 0;
+  width: inherit;
+  height: 100%;
+  /* background: #009578; */
+  transform-origin: center top; 
+  transform: rotate(0.25turn);
+  transition: transform 0.2s ease-out;
+}
+
+
+.gaugeFill {
+  /* position: absolute; */
   top: 100%;
   left: 0;
   width: inherit;
@@ -49,7 +62,36 @@ padding-top: 1rem;
   transform-origin: center top;
   transform: rotate(0.25turn);
   transition: transform 0.2s ease-out;
+
+  animation: wiggle linear 0.5s infinite;
+  animation-direction: alternate;  
+
+border-bottom: solid 1px hotpink;
 }
+
+
+@keyframes wiggle {
+    0% {transform: rotate(10deg);}
+    25% {transform: rotate(5deg);}
+    50% {transform: rotate(15deg);}
+    75% {transform: rotate(3deg);}
+    100% {transform: rotate(12deg);}
+  }
+
+
+
+  /* .gaugeLine {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: inherit;
+    height: 100%;
+    background: #a7629b;
+    transform-origin: center top;
+    
+    transition: transform 0.2s ease-out;
+ 
+  } */
 
 .gaugeCover {
   width: 75%;

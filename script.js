@@ -12,7 +12,7 @@ function loadJSON() {
             // when loaded, prepare objects
             prepareData(data);
         });
-    setTimeout(loadJSON, 10000);
+    setTimeout(loadJSON, 5000);
 };
 
 
@@ -29,19 +29,17 @@ function showData(queue) {
     const gaugeElement = document.querySelector(".gauge");
 
     function setGaugeValue(gauge, value) {
-        if (value < 0 || value > 25) {
+        if (value < 0 || value > 24) {
             return;
         }
-
-        gauge.querySelector(".gaugeFill").style.transform = `rotate(${value / 50}turn)`;
+        gauge.querySelector(".fillWrapper").style.transform = `rotate(${value / 50}turn)`;
+        // gauge.querySelector(".gaugeFill").style.animationName = "wiggle";
+        // gauge.querySelector(".gaugeLine").style.transform = `rotate(${value / 50}turn)`;
         gauge.querySelector(".gaugeCover").textContent = `${Math.round(value * 4)}%`;
         // gauge.querySelector(".gaugeCover").textContent = queue;
     }
 
     setGaugeValue(gaugeElement, queue);
-
-
-
 }
 
 
